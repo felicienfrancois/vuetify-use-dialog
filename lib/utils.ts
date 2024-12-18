@@ -16,6 +16,7 @@ export interface ConfirmDialogOptions {
   content?: string
   contentComponent?: Component
   contentComponentProps?: Record<string, any>
+  actionContentComponent?: Component
   confirmationText?: string
   cancellationText?: string
   dialogProps?: ExtractProps<typeof VDialog>
