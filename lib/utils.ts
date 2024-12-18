@@ -67,7 +67,7 @@ export function mount(component: Component, props: ConfirmDialogOptions & { prom
 }
 
 export interface ConfirmDialogKeyValue {
-  mountDialog: (options: ConfirmDialogOptions) => Promise<undefined>
+  mountConfirmDialog: (options: ConfirmDialogOptions) => Promise<undefined>
   mountSnackbar: (options: SnackbarOptions) => void
   state: {
     promiseIds: Map<string, {

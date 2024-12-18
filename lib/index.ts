@@ -15,7 +15,7 @@ type WithRequired<T, K extends keyof T> = T & { [P in K]-?: T[P] }
 
 const plugin: Plugin = {
   install(app, globalOptions?: GlobalOptions) {
-    function mountDialog(options: ConfirmDialogOptions) {
+    function mountConfirmDialog(options: ConfirmDialogOptions) {
       return new Promise<boolean>((resolve) => {
         return new Promise<boolean>((_resolve) => {
           mount(ConfirmDialog, {
@@ -41,12 +41,12 @@ const plugin: Plugin = {
     }
 
     app.provide('ConfirmDialogKey', {
-      mountDialog,
+      mountConfirmDialog,
       mountSnackbar,
     })
 
     app.config.globalProperties.$confirm = (options: WithRequired<ConfirmDialogOptions, 'theme' | 'resolve'>) => {
-      return mountDialog(options)
+      return mountConfirmDialog(options)
     }
 
     app.config.globalProperties.$toast = (options: WithRequired<SnackbarOptions, 'theme' | 'onClose'>) => {
@@ -63,7 +63,7 @@ function useConfirm() {
     if (!dialog)
       throw new Error('Missing dialog instance')
 
-    return dialog.mountDialog({
+    return dialog.mountConfirmDialog({
       theme: theme.name.value,
       ...options,
     })
