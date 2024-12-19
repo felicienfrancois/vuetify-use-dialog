@@ -34,6 +34,16 @@ export interface ConfirmDialogOptions {
    */
   resolve?: (value: boolean) => void
 }
+export interface DialogOptions {
+  component?: Component
+  props?: Record<string, any>
+  dialogProps?: ExtractProps<typeof VDialog>
+  theme?: string
+  /**
+   * @internal
+   */
+  resolve?: (value: boolean) => void
+}
 
 export interface SnackbarOptions {
   text?: string
@@ -68,6 +78,7 @@ export function mount(component: Component, props: ConfirmDialogOptions & { prom
 }
 
 export interface ConfirmDialogKeyValue {
+  mountDialog: (options: DialogOptions) => Promise<undefined>
   mountConfirmDialog: (options: ConfirmDialogOptions) => Promise<undefined>
   mountSnackbar: (options: SnackbarOptions) => void
   state: {
