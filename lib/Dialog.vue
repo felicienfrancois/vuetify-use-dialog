@@ -27,7 +27,7 @@ const props = defineProps({
 
 const isOpen = ref(true)
 
-function close(result) {
+function close(result: any) {
   props.resolve(result)
   isOpen.value = false
 }
