@@ -36,7 +36,7 @@ export interface ConfirmDialogOptions {
 }
 export interface DialogOptions {
   component?: Component
-  props?: Record<string, any>
+  componentProps?: Record<string, any>
   dialogProps?: ExtractProps<typeof VDialog>
   theme?: string
   /**
@@ -59,7 +59,7 @@ export interface SnackbarOptions {
   onClose?: () => void
 }
 
-export function mount(component: Component, props: ConfirmDialogOptions & { promiseId: string } | SnackbarOptions, app: App, el?: HTMLDivElement) {
+export function mount(component: Component, props: DialogOptions & { promiseId: string } | ConfirmDialogOptions & { promiseId: string } | SnackbarOptions, app: App, el?: HTMLDivElement) {
   const vNode: VNode | null = createVNode(component, {
     ...props,
   })

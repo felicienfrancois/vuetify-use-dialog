@@ -31,7 +31,7 @@ export interface ConfirmDialogOptions {
 }
 export interface DialogOptions {
     component?: Component;
-    props?: Record<string, any>;
+    componentProps?: Record<string, any>;
     dialogProps?: ExtractProps<typeof VDialog>;
     theme?: string;
     /**
@@ -52,7 +52,9 @@ export interface SnackbarOptions {
      */
     onClose?: () => void;
 }
-export declare function mount(component: Component, props: ConfirmDialogOptions & {
+export declare function mount(component: Component, props: DialogOptions & {
+    promiseId: string;
+} | ConfirmDialogOptions & {
     promiseId: string;
 } | SnackbarOptions, app: App, el?: HTMLDivElement): {
     vNode: VNode<import('vue').RendererNode, import('vue').RendererElement, {
