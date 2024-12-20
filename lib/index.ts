@@ -17,29 +17,33 @@ type WithRequired<T, K extends keyof T> = T & { [P in K]-?: T[P] }
 
 const plugin: Plugin = {
   install(app, globalOptions?: GlobalOptions) {
+    const mountEl = document.createElement('div')
     function mountDialog(options: DialogOptions) {
       return new Promise<boolean>((resolve) => {
         return new Promise<boolean>((_resolve) => {
           mount(Dialog, {
             ...defu(options, globalOptions?.dialog ?? {}),
             resolve: _resolve,
-          }, app)
+          }, app, mountEl)
         }).then((value) => {
-          render(null, app._container.firstElementChild)
+          app._container.removeChild(mountEl)
+          render(null, mountEl)
           resolve(value)
         })
       })
     }
 
     function mountConfirmDialog(options: ConfirmDialogOptions) {
+      const mountEl = document.createElement('div')
       return new Promise<boolean>((resolve) => {
         return new Promise<boolean>((_resolve) => {
           mount(ConfirmDialog, {
             ...defu(options, globalOptions?.confirmDialog ?? {}),
             resolve: _resolve,
-          }, app)
+          }, app, mountEl)
         }).then((value) => {
-          render(null, app._container.firstElementChild)
+          app._container.removeChild(mountEl)
+          render(null, mountEl)
           resolve(value)
         })
       })
