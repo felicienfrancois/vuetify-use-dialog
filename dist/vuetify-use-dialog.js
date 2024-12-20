@@ -1,4 +1,4 @@
-import { defineComponent as O, ref as g, openBlock as a, createBlock as m, unref as c, withCtx as f, createVNode as d, mergeProps as s, resolveDynamicComponent as b, nextTick as $, onMounted as I, computed as M, normalizeProps as y, guardReactiveProps as h, createTextVNode as v, toDisplayString as P, createElementBlock as x, Fragment as j, createCommentVNode as F, createSlots as N, render as k, inject as A } from "vue";
+import { defineComponent as O, ref as g, openBlock as a, createBlock as m, unref as c, withCtx as f, createVNode as d, mergeProps as s, resolveDynamicComponent as b, nextTick as $, onMounted as I, computed as M, normalizeProps as y, guardReactiveProps as V, createTextVNode as v, toDisplayString as P, createElementBlock as x, Fragment as j, createCommentVNode as F, createSlots as N, render as k, inject as A } from "vue";
 import { useTheme as K } from "vuetify";
 import { VThemeProvider as E, VDialog as U, VCard as H, VCardText as L, VCardActions as z, VSpacer as R, VBtn as D, VSnackbar as G } from "vuetify/components";
 import { VCardTitle as J } from "vuetify/lib/components/VCard/index.mjs";
@@ -207,12 +207,12 @@ const T = W(), X = /* @__PURE__ */ O({
         d(c(U), s(e.dialogProps, {
           modelValue: n.value,
           "onUpdate:modelValue": [
-            p[1] || (p[1] = (V) => n.value = V),
+            p[1] || (p[1] = (h) => n.value = h),
             q
           ]
         }), {
           default: f(() => [
-            d(c(H), y(h(e.cardProps)), {
+            d(c(H), y(V(e.cardProps)), {
               default: f(() => [
                 e.titleComponent ? (a(), m(b(e.titleComponent), y(s({ key: 0 }, e.titleComponentProps)), null, 16)) : (a(), m(J, y(s({ key: 1 }, e.cardTitleProps)), {
                   default: f(() => [
@@ -220,7 +220,7 @@ const T = W(), X = /* @__PURE__ */ O({
                   ]),
                   _: 1
                 }, 16)),
-                d(c(L), y(h(e.cardTextProps)), {
+                d(c(L), y(V(e.cardTextProps)), {
                   default: f(() => [
                     e.contentComponent ? (a(), m(b(e.contentComponent), y(s({ key: 0 }, e.contentComponentProps)), null, 16)) : (a(), x(j, { key: 1 }, [
                       e.content ? (a(), x(j, { key: 0 }, [
@@ -231,13 +231,13 @@ const T = W(), X = /* @__PURE__ */ O({
                         ref_key: "textFieldInput",
                         ref: l,
                         modelValue: i.value,
-                        "onUpdate:modelValue": p[0] || (p[0] = (V) => i.value = V)
+                        "onUpdate:modelValue": p[0] || (p[0] = (h) => i.value = h)
                       }, e.confirmationKeywordTextFieldProps, { variant: "underlined" }), null, 16, ["modelValue"])) : F("", !0)
                     ], 64))
                   ]),
                   _: 1
                 }, 16),
-                d(c(z), y(h(e.cardActionsProps)), {
+                d(c(z), y(V(e.cardActionsProps)), {
                   default: f(() => [
                     e.actionsContentComponent ? (a(), m(b(e.actionsContentComponent), {
                       key: 0,
@@ -354,6 +354,7 @@ const T = W(), X = /* @__PURE__ */ O({
 });
 function w(e, t, n, l) {
   const i = d(e, {
+    key: Math.random(),
     ...t
   });
   return n && n._context && (i.appContext = n._context), l ? (n._container.appendChild(l), k(i, l)) : k(i, n._container.firstElementChild), { vNode: i };

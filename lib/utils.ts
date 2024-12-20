@@ -61,8 +61,10 @@ export interface SnackbarOptions {
 
 export function mount(component: Component, props: DialogOptions & { promiseId: string } | ConfirmDialogOptions & { promiseId: string } | SnackbarOptions, app: App, el?: HTMLDivElement) {
   const vNode: VNode | null = createVNode(component, {
+    key: Math.random(),
     ...props,
   })
+
   if (app && app._context)
     vNode.appContext = app._context
 
