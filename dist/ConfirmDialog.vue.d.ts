@@ -1,6 +1,6 @@
 import { Component, PropType } from 'vue';
 
-declare const _default: import('vue').DefineComponent<{
+declare const _default: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
     title: {
         type: StringConstructor;
         required: false;
@@ -93,7 +93,7 @@ declare const _default: import('vue').DefineComponent<{
         type: PropType<(value: boolean) => void>;
         required: true;
     };
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
+}>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {}, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<{
     title: {
         type: StringConstructor;
         required: false;
@@ -186,7 +186,7 @@ declare const _default: import('vue').DefineComponent<{
         type: PropType<(value: boolean) => void>;
         required: true;
     };
-}>>, {
+}>> & Readonly<{}>, {
     title: string;
     content: string;
     confirmationKeywordTextFieldProps: Record<string, any>;
@@ -199,5 +199,5 @@ declare const _default: import('vue').DefineComponent<{
     cardActionsProps: Record<string, any>;
     cancellationButtonProps: Record<string, any>;
     confirmationButtonProps: Record<string, any>;
-}, {}>;
+}, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;
 export default _default;

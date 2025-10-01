@@ -1,6 +1,6 @@
 import { Component, PropType } from 'vue';
 
-declare const _default: import('vue').DefineComponent<{
+declare const _default: import('vue').DefineComponent<import('vue').ExtractPropTypes<{
     text: {
         type: StringConstructor;
         required: false;
@@ -34,9 +34,9 @@ declare const _default: import('vue').DefineComponent<{
         type: StringConstructor;
         required: true;
     };
-}, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+}>, {}, {}, {}, {}, import('vue').ComponentOptionsMixin, import('vue').ComponentOptionsMixin, {
     close: (...args: any[]) => void;
-}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<{
+}, string, import('vue').PublicProps, Readonly<import('vue').ExtractPropTypes<{
     text: {
         type: StringConstructor;
         required: false;
@@ -70,13 +70,13 @@ declare const _default: import('vue').DefineComponent<{
         type: StringConstructor;
         required: true;
     };
-}>> & {
+}>> & Readonly<{
     onClose?: ((...args: any[]) => any) | undefined;
-}, {
+}>, {
     text: string;
     snackbarProps: Record<string, any>;
     showCloseButton: boolean;
     closeButtonProps: Record<string, any>;
     closeButtonText: string;
-}, {}>;
+}, {}, {}, {}, string, import('vue').ComponentProvideOptions, true, {}, any>;
 export default _default;

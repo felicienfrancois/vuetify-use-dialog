@@ -17,8 +17,8 @@ type WithRequired<T, K extends keyof T> = T & { [P in K]-?: T[P] }
 
 const plugin: Plugin = {
   install(app, globalOptions?: GlobalOptions) {
-    const mountEl = document.createElement('div')
     function mountDialog(options: DialogOptions) {
+      const mountEl = document.createElement('div')
       return new Promise<boolean>((resolve) => {
         return new Promise<boolean>((_resolve) => {
           mount(Dialog, {

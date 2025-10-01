@@ -1,5 +1,5 @@
-import { ConfirmDialogOptions, DialogOptions, SnackbarOptions } from './utils';
 import { Plugin } from 'vue';
+import { ConfirmDialogOptions, DialogOptions, SnackbarOptions } from './utils';
 
 declare const plugin: Plugin;
 declare function useDialog(): (options: DialogOptions) => Promise<undefined>;

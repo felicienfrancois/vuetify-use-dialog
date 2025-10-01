@@ -1,5 +1,5 @@
-import { VBtn, VCard, VCardActions, VCardText, VCardTitle, VDialog, VSnackbar, VTextField } from 'vuetify/components';
 import { AllowedComponentProps, App, Component, VNode, VNodeProps } from 'vue';
+import { VBtn, VCard, VCardActions, VCardText, VCardTitle, VDialog, VSnackbar, VTextField } from 'vuetify/components';
 
 type ExtractProps<TComponent> = TComponent extends new () => {
     $props: infer P;

@@ -1,4 +1,4 @@
-import { defineComponent as O, ref as b, openBlock as a, createBlock as y, unref as c, withCtx as d, createVNode as f, mergeProps as s, resolveDynamicComponent as k, nextTick as $, onMounted as I, computed as M, normalizeProps as C, guardReactiveProps as V, createTextVNode as P, toDisplayString as g, createElementBlock as x, Fragment as j, createCommentVNode as F, createSlots as N, render as q, inject as A } from "vue";
+import { defineComponent as O, ref as b, openBlock as a, createBlock as y, unref as c, withCtx as d, createVNode as s, mergeProps as m, resolveDynamicComponent as k, nextTick as $, onMounted as I, computed as M, normalizeProps as v, guardReactiveProps as V, createTextVNode as P, toDisplayString as g, createElementBlock as x, Fragment as j, createCommentVNode as F, createSlots as N, render as q, inject as A } from "vue";
 import { useTheme as E } from "vuetify";
 import { VThemeProvider as K, VDialog as U, VCard as H, VCardText as L, VCardActions as z, VSpacer as R, VBtn as D, VSnackbar as G } from "vuetify/components";
 import { VCardTitle as J } from "vuetify/lib/components/VCard/index.mjs";
@@ -9,27 +9,27 @@ function S(e) {
   const t = Object.getPrototypeOf(e);
   return t !== null && t !== Object.prototype && Object.getPrototypeOf(t) !== null || Symbol.iterator in e ? !1 : Symbol.toStringTag in e ? Object.prototype.toString.call(e) === "[object Module]" : !0;
 }
-function B(e, t, n = ".", i) {
+function B(e, t, n = ".", l) {
   if (!S(t))
-    return B(e, {}, n, i);
-  const r = Object.assign({}, t);
-  for (const l in e) {
-    if (l === "__proto__" || l === "constructor")
+    return B(e, {}, n, l);
+  const i = Object.assign({}, t);
+  for (const o in e) {
+    if (o === "__proto__" || o === "constructor")
       continue;
-    const o = e[l];
-    o != null && (i && i(r, l, o, n) || (Array.isArray(o) && Array.isArray(r[l]) ? r[l] = [...o, ...r[l]] : S(o) && S(r[l]) ? r[l] = B(
-      o,
-      r[l],
-      (n ? `${n}.` : "") + l.toString(),
-      i
-    ) : r[l] = o));
+    const r = e[o];
+    r != null && (l && l(i, o, r, n) || (Array.isArray(r) && Array.isArray(i[o]) ? i[o] = [...r, ...i[o]] : S(r) && S(i[o]) ? i[o] = B(
+      r,
+      i[o],
+      (n ? `${n}.` : "") + o.toString(),
+      l
+    ) : i[o] = r));
   }
-  return r;
+  return i;
 }
 function W(e) {
   return (...t) => (
     // eslint-disable-next-line unicorn/no-array-reduce
-    t.reduce((n, i) => B(n, i, "", e), {})
+    t.reduce((n, l) => B(n, l, "", e), {})
   );
 }
 const T = W(), X = /* @__PURE__ */ O({
@@ -58,28 +58,28 @@ const T = W(), X = /* @__PURE__ */ O({
   },
   setup(e) {
     const t = e, n = b(!0);
-    function i(l) {
-      t.resolve(l), n.value = !1;
+    function l(o) {
+      t.resolve(o), n.value = !1;
     }
-    function r(l) {
-      l || $(() => {
+    function i(o) {
+      o || $(() => {
         t.resolve(!1);
       });
     }
-    return (l, o) => (a(), y(c(K), { theme: e.theme }, {
+    return (o, r) => (a(), y(c(K), { theme: e.theme }, {
       default: d(() => [
-        f(c(U), s(e.dialogProps, {
+        s(c(U), m(e.dialogProps, {
           modelValue: n.value,
           "onUpdate:modelValue": [
-            o[1] || (o[1] = (u) => n.value = u),
-            r
+            r[1] || (r[1] = (u) => n.value = u),
+            i
           ]
         }), {
           default: d(() => [
-            (a(), y(k(e.component), s(e.componentProps, {
+            (a(), y(k(e.component), m(e.componentProps, {
               isActive: n.value,
-              "onUpdate:isActive": o[0] || (o[0] = (u) => n.value = u),
-              onClose: i
+              "onUpdate:isActive": r[0] || (r[0] = (u) => n.value = u),
+              onClose: l
             }), null, 16, ["isActive"]))
           ]),
           _: 1
@@ -185,77 +185,77 @@ const T = W(), X = /* @__PURE__ */ O({
     }
   },
   setup(e) {
-    const t = e, n = b(!0), i = b(null), r = b("");
-    function l() {
+    const t = e, n = b(!0), l = b(null), i = b("");
+    function o() {
       t.resolve(!0), n.value = !1;
     }
-    function o() {
+    function r() {
       t.resolve(!1), n.value = !1;
     }
     I(() => {
-      var v;
-      (v = i.value) == null || v.focus();
+      var C;
+      (C = l.value) == null || C.focus();
     });
-    const u = M(() => t.confirmationKeyword ? t.confirmationKeyword !== r.value : !1);
-    function m(v) {
-      v || $(() => {
+    const u = M(() => t.confirmationKeyword ? t.confirmationKeyword !== i.value : !1);
+    function f(C) {
+      C || $(() => {
         t.resolve(!1);
       });
     }
-    return (v, p) => (a(), y(c(K), { theme: e.theme }, {
+    return (C, p) => (a(), y(c(K), { theme: e.theme }, {
       default: d(() => [
-        f(c(U), s(e.dialogProps, {
+        s(c(U), m(e.dialogProps, {
           modelValue: n.value,
           "onUpdate:modelValue": [
             p[1] || (p[1] = (h) => n.value = h),
-            m
+            f
           ]
         }), {
           default: d(() => [
-            f(c(H), C(V(e.cardProps)), {
+            s(c(H), v(V(e.cardProps)), {
               default: d(() => [
-                e.titleComponent ? (a(), y(k(e.titleComponent), C(s({ key: 0 }, e.titleComponentProps)), null, 16)) : (a(), y(J, C(s({ key: 1 }, e.cardTitleProps)), {
+                e.titleComponent ? (a(), y(k(e.titleComponent), v(m({ key: 0 }, e.titleComponentProps)), null, 16)) : (a(), y(J, v(m({ key: 1 }, e.cardTitleProps)), {
                   default: d(() => [
                     P(g(e.title), 1)
                   ]),
                   _: 1
                 }, 16)),
-                f(c(L), C(V(e.cardTextProps)), {
+                s(c(L), v(V(e.cardTextProps)), {
                   default: d(() => [
-                    e.contentComponent ? (a(), y(k(e.contentComponent), C(s({ key: 0 }, e.contentComponentProps)), null, 16)) : (a(), x(j, { key: 1 }, [
+                    e.contentComponent ? (a(), y(k(e.contentComponent), v(m({ key: 0 }, e.contentComponentProps)), null, 16)) : (a(), x(j, { key: 1 }, [
                       e.content ? (a(), x(j, { key: 0 }, [
                         P(g(e.content), 1)
                       ], 64)) : F("", !0),
-                      e.confirmationKeyword ? (a(), y(Q, s({
+                      e.confirmationKeyword ? (a(), y(Q, m({
                         key: 1,
                         ref_key: "textFieldInput",
-                        ref: i,
-                        modelValue: r.value,
-                        "onUpdate:modelValue": p[0] || (p[0] = (h) => r.value = h)
+                        ref: l,
+                        modelValue: i.value,
+                        "onUpdate:modelValue": p[0] || (p[0] = (h) => i.value = h)
                       }, e.confirmationKeywordTextFieldProps, { variant: "underlined" }), null, 16, ["modelValue"])) : F("", !0)
                     ], 64))
                   ]),
                   _: 1
                 }, 16),
-                f(c(z), C(V(e.cardActionsProps)), {
+                s(c(z), v(V(e.cardActionsProps)), {
                   default: d(() => [
                     e.actionsContentComponent ? (a(), y(k(e.actionsContentComponent), {
                       key: 0,
                       "confirmation-button-disabled": u.value,
-                      cancel: o,
-                      confirm: l
+                      cancel: r,
+                      confirm: o
                     }, null, 8, ["confirmation-button-disabled"])) : (a(), x(j, { key: 1 }, [
-                      f(c(R)),
-                      f(c(D), s(e.cancellationButtonProps, { onClick: o }), {
+                      s(c(R)),
+                      s(c(D), m(e.cancellationButtonProps, { onClick: r }), {
                         default: d(() => [
                           P(g(e.cancellationText), 1)
                         ]),
                         _: 1
                       }, 16),
-                      f(c(D), s({
+                      s(c(D), m({
                         color: "primary",
                         disabled: u.value
-                      }, e.confirmationButtonProps, { onClick: l }), {
+                      }, e.confirmationButtonProps, { onClick: o }), {
                         default: d(() => [
                           P(g(e.confirmationText), 1)
                         ]),
@@ -314,18 +314,18 @@ const T = W(), X = /* @__PURE__ */ O({
   },
   emits: ["close"],
   setup(e, { emit: t }) {
-    const n = e, i = t, r = b(!0), l = M(() => ({
+    const n = e, l = t, i = b(!0), o = M(() => ({
       ...n.snackbarProps,
       onAfterLeave() {
-        var o, u;
-        (u = (o = n.snackbarProps).onAfterLeave) == null || u.call(o), i("close");
+        var r, u;
+        (u = (r = n.snackbarProps).onAfterLeave) == null || u.call(r), l("close");
       }
     }));
-    return (o, u) => (a(), y(c(K), { theme: e.theme }, {
+    return (r, u) => (a(), y(c(K), { theme: e.theme }, {
       default: d(() => [
-        f(c(G), s(l.value, {
-          modelValue: r.value,
-          "onUpdate:modelValue": u[1] || (u[1] = (m) => r.value = m)
+        s(c(G), m(o.value, {
+          modelValue: i.value,
+          "onUpdate:modelValue": u[1] || (u[1] = (f) => i.value = f)
         }), N({
           default: d(() => [
             e.contentComponent ? (a(), y(k(e.contentComponent), { key: 0 })) : (a(), x(j, { key: 1 }, [
@@ -337,11 +337,11 @@ const T = W(), X = /* @__PURE__ */ O({
           e.showCloseButton ? {
             name: "actions",
             fn: d(() => [
-              f(c(D), s({
+              s(c(D), m({
                 variant: "text",
                 text: e.closeButtonText
               }, e.closeButtonProps, {
-                onClick: u[0] || (u[0] = (m) => r.value = !1)
+                onClick: u[0] || (u[0] = (f) => i.value = !1)
               }), null, 16, ["text"])
             ]),
             key: "0"
@@ -352,85 +352,85 @@ const T = W(), X = /* @__PURE__ */ O({
     }, 8, ["theme"]));
   }
 });
-function w(e, t, n, i) {
-  const r = f(e, {
+function w(e, t, n, l) {
+  const i = s(e, {
     key: Math.random(),
     ...t
   });
-  return n && n._context && (r.appContext = n._context), i ? (n._container.appendChild(i), q(r, i)) : q(r, n._container.firstElementChild), { vNode: r };
+  return n && n._context && (i.appContext = n._context), l ? (n._container.appendChild(l), q(i, l)) : q(i, n._container.firstElementChild), { vNode: i };
 }
 const re = {
   install(e, t) {
-    const n = document.createElement("div");
-    function i(o) {
-      return new Promise((u) => new Promise((m) => {
+    function n(o) {
+      const r = document.createElement("div");
+      return new Promise((u) => new Promise((f) => {
         w(X, {
           ...T(o, (t == null ? void 0 : t.dialog) ?? {}),
-          resolve: m
-        }, e, n);
-      }).then((m) => {
-        e._container.removeChild(n), q(null, n), u(m);
-      }));
-    }
-    function r(o) {
-      const u = document.createElement("div");
-      return new Promise((m) => new Promise((v) => {
-        w(Y, {
-          ...T(o, (t == null ? void 0 : t.confirmDialog) ?? {}),
-          resolve: v
-        }, e, u);
-      }).then((v) => {
-        e._container.removeChild(u), q(null, u), m(v);
+          resolve: f
+        }, e, r);
+      }).then((f) => {
+        e._container.removeChild(r), q(null, r), u(f);
       }));
     }
     function l(o) {
-      const u = document.createElement("div");
+      const r = document.createElement("div");
+      return new Promise((u) => new Promise((f) => {
+        w(Y, {
+          ...T(o, (t == null ? void 0 : t.confirmDialog) ?? {}),
+          resolve: f
+        }, e, r);
+      }).then((f) => {
+        e._container.removeChild(r), q(null, r), u(f);
+      }));
+    }
+    function i(o) {
+      const r = document.createElement("div");
       w(Z, {
         ...T(o, (t == null ? void 0 : t.snackbar) ?? {}),
         onClose() {
-          e._container.removeChild(u), q(null, u);
+          e._container.removeChild(r), q(null, r);
         }
-      }, e, u);
+      }, e, r);
     }
     e.provide("ConfirmDialogKey", {
-      mountDialog: i,
-      mountConfirmDialog: r,
-      mountSnackbar: l
-    }), e.config.globalProperties.$dialog = (o) => i(o), e.config.globalProperties.$confirm = (o) => r(o), e.config.globalProperties.$toast = (o) => l(o);
+      mountDialog: n,
+      mountConfirmDialog: l,
+      mountSnackbar: i
+    }), e.config.globalProperties.$dialog = (o) => n(o), e.config.globalProperties.$confirm = (o) => l(o), e.config.globalProperties.$toast = (o) => i(o);
   }
 };
 function ie() {
   const e = A("ConfirmDialogKey"), t = E();
-  function n(i) {
+  function n(l) {
     if (!e)
       throw new Error("Missing dialog instance");
     return e.mountDialog({
       theme: t.name.value,
-      ...i
+      ...l
     });
   }
   return n;
 }
 function le() {
   const e = A("ConfirmDialogKey"), t = E();
-  function n(i) {
+  function n(l) {
     if (!e)
       throw new Error("Missing dialog instance");
     return e.mountConfirmDialog({
       theme: t.name.value,
-      ...i
+      ...l
     });
   }
   return n;
 }
 function ue() {
   const e = A("ConfirmDialogKey"), t = E();
-  function n(i) {
+  function n(l) {
     if (!e)
       throw new Error("Missing dialog instance");
     return e.mountSnackbar({
       theme: t.name.value,
-      ...i
+      ...l
     });
   }
   return n;
