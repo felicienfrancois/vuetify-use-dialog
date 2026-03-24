@@ -1,15 +1,21 @@
-# vuetify-use-dialog
+# @felicienfrancois/vuetify-use-dialog
 
-> Confirming user choice is a good thing to do, it should also be easy to do.
+A module that simplifies the creation of dialogs and snackbars in [Vuetify 3](https://v3.vuetifyjs.com).
 
-A module that simplifies the creation of dialogs and snackbars in [Vuetify](https://next.vuetifyjs.com).
+Forked from [https://github.com/wobsoriano/vuetify-use-dialog](https://github.com/wobsoriano/vuetify-use-dialog)
 
-Demo: [StackBlitz](https://stackblitz.com/edit/vitejs-vite-mp6ajx?file=src%2Fcomponents%2FDemo.vue)
+Changelog :
+
+- Rename mountDialog into mountConfirmDialog
+- add missing option definition actionContentComponent
+- Fix type definitions
+- Add useDialog composable
+- Stack dialogs instead of replacing
 
 ## Installation
 
 ```bash
-npm install vuetify-use-dialog
+npm install @felicienfrancois/vuetify-use-dialog
 ```
 
 ## Usage

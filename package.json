@@ -1,17 +1,16 @@
 {
-  "name": "vuetify-use-dialog",
+  "name": "@felicienfrancois/vuetify-use-dialog",
   "type": "module",
-  "version": "0.6.11",
-  "packageManager": "pnpm@8.15.6",
+  "version": "1.0.0",
   "description": "",
-  "author": "Robert Soriano <sorianorobertc@gmail.com>",
+  "author": "Félicien François",
   "license": "MIT",
-  "homepage": "https://github.com/wobsoriano/vuetify-use-dialog#readme",
+  "homepage": "https://github.com/felicienfrancois/vuetify-use-dialog#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wobsoriano/vuetify-use-dialog.git"
+    "url": "git+https://github.com/felicienfrancois/vuetify-use-dialog.git"
   },
-  "bugs": "https://github.com/wobsoriano/vuetify-use-dialog/issues",
+  "bugs": "https://github.com/felicienfrancois/vuetify-use-dialog/issues",
   "keywords": [
     "vuetify",
     "vue",
@@ -46,9 +45,7 @@
     "dev": "vite serve",
     "dev:build": "vite build",
     "dev:preview": "vite preview",
-    "lint": "eslint .",
-    "prepublishOnly": "pnpm build",
-    "release": "bumpp && npm publish"
+    "lint": "eslint ."
   },
   "peerDependencies": {
     "vue": "^3.2.0",
@@ -62,10 +59,8 @@
     "@mdi/font": "^7.4.47",
     "@types/node": "^20.12.7",
     "@vitejs/plugin-vue": "^5.0.4",
-    "bumpp": "^9.4.0",
     "eslint": "^9.0.0",
     "rimraf": "^5.0.5",
-    "roboto-fontface": "^0.10.0",
     "typescript": "^5.4.4",
     "vite": "^5.2.8",
     "vite-plugin-dts": "^3.8.1",

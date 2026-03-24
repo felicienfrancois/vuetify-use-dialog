@@ -1,8 +1,8 @@
 import { defineComponent as O, ref as b, openBlock as a, createBlock as y, unref as c, withCtx as d, createVNode as s, mergeProps as m, resolveDynamicComponent as k, nextTick as $, onMounted as I, computed as M, normalizeProps as v, guardReactiveProps as V, createTextVNode as P, toDisplayString as g, createElementBlock as x, Fragment as j, createCommentVNode as F, createSlots as N, render as q, inject as A } from "vue";
 import { useTheme as E } from "vuetify";
 import { VThemeProvider as K, VDialog as U, VCard as H, VCardText as L, VCardActions as z, VSpacer as R, VBtn as D, VSnackbar as G } from "vuetify/components";
-import { VCardTitle as J } from "vuetify/lib/components/VCard/index.mjs";
-import { VTextField as Q } from "vuetify/lib/components/VTextField/index.mjs";
+import { VCardTitle as J } from "vuetify/components/VCard";
+import { VTextField as Q } from "vuetify/components/VTextField";
 function S(e) {
   if (e === null || typeof e != "object")
     return !1;
