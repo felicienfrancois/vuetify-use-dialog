@@ -4,7 +4,8 @@ import pluginVue from "eslint-plugin-vue";
 import skipFormatting from "@vue/eslint-config-prettier/skip-formatting";
 
 export default [
-  { files: ["**/*.{js,mjs,cjs,ts,vue}"] },
+  { ignores: ["**/*.d.ts"] },
+  { files: ["**/*.{js,mjs,cjs,vue}"] },
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
   ...pluginVue.configs["flat/essential"],

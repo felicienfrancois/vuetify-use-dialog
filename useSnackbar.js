@@ -2,31 +2,9 @@ import { createVNode, render, getCurrentInstance, ref, h, inject } from 'vue';
 import { VSnackbar, VThemeProvider, VBtn } from 'vuetify/components';
 
 /**
- * @typedef {import('vue').Component} Component
- */
-
-/**
- * @typedef {Object} SnackbarOptions
- * @property {string} [text]
- * @property {Component|string} [contentComponent]
- * @property {Record<string, any>} [snackbarProps]
- * @property {boolean} [showCloseButton]
- * @property {Record<string, any>} [closeButtonProps]
- * @property {string} [closeButtonText]
- * @property {string} [theme]
- * @property {import('vue').AppContext} [appContext]
- */
-
-/**
- * @callback UseSnackbarFn
- * @param {SnackbarOptions} [options]
- * @returns {void}
- */
-
-/**
  * Creates a snackbar function that mounts a vuetify snackbar when called.
- * @param {SnackbarOptions} [globalOptions] Options applied to all snackbars triggered by the returned function.
- * @returns {UseSnackbarFn}
+ * @param {import('./index.js').SnackbarOptions} [globalOptions] Options applied to all snackbars triggered by the returned function.
+ * @returns {import('./index.js').UseSnackbarFn}
  */
 export function useSnackbar(globalOptions = {}) {
   const instance = getCurrentInstance();

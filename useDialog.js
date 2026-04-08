@@ -2,28 +2,9 @@ import { createVNode, render, getCurrentInstance, ref, h, inject } from 'vue';
 import { VDialog, VThemeProvider } from 'vuetify/components';
 
 /**
- * @typedef {import('vue').Component} Component
- */
-
-/**
- * @typedef {Object} DialogOptions
- * @property {Component} [component] - Vue Component to mount inside the dialog
- * @property {Record<string, any>} [componentProps] - Props to pass to the component
- * @property {Record<string, any>} [dialogProps] - Props to pass to the v-dialog component
- * @property {string} [theme] - Theme to use
- * @property {import('vue').AppContext} [appContext] - Optional application context
- */
-
-/**
- * @callback UseDialogFn
- * @param {DialogOptions} [options]
- * @returns {Promise<any>}
- */
-
-/**
  * Creates a dialog function that mounts a component in a vuetify dialog when called.
- * @param {DialogOptions} [globalOptions] Options applied to all dialogs triggered by the returned function.
- * @returns {UseDialogFn}
+ * @param {import('./index.js').DialogOptions} [globalOptions] Options applied to all dialogs triggered by the returned function.
+ * @returns {import('./index.js').UseDialogFn}
  */
 export function useDialog(globalOptions = {}) {
   const instance = getCurrentInstance();
