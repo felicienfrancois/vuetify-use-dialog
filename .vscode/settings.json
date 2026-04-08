@@ -1,0 +1,28 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "vue.autoInsert.dotValue": true,
+  "editor.suggest.insertMode": "replace",
+  "editor.snippetSuggestions": "none",
+  "editor.suggest.localityBonus": true,
+  "editor.suggest.selectionMode": "always",
+  "html.autoCreateQuotes": false,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "outline.showVariables": false,
+  "outline.collapseItems": "alwaysCollapse",
+  "editor.suggest.showWords": false,
+  "prettier.experimentalTernaries": true,
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "prettier.printWidth": 150,
+  "prettier.trailingComma": "es5"
+}
