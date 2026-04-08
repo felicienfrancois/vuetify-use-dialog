@@ -1,5 +1,5 @@
 {
-  "name": "vuetify-use-dialog",
+  "name": "@felicienfrancois/vuetify-use-dialog",
   "version": "3.0.0",
   "description": "Vuejs composable which allow to mount a component in a vuetify dialog.",
   "type": "module",

@@ -19,7 +19,7 @@ You can use the functions directly as composables without needing a plugin insta
 ```vue
 <script setup>
 import MyComponentDialog from "@/components/MyComponentDialog.vue";
-import { useDialog } from "vuetify-use-dialog";
+import { useDialog } from "@felicienfrancois/vuetify-use-dialog";
 
 // 1. Initialize the composable
 const dialog = useDialog({
@@ -90,7 +90,7 @@ function cancel() {
 
 ```vue
 <script setup>
-import { useConfirm, useSnackbar } from "vuetify-use-dialog";
+import { useConfirm, useSnackbar } from "@felicienfrancois/vuetify-use-dialog";
 
 const createConfirm = useConfirm();
 const createSnackbar = useSnackbar();
@@ -113,7 +113,7 @@ async function handleConfirm() {
 
 ```vue
 <script setup>
-import { useSnackbar } from "vuetify-use-dialog";
+import { useSnackbar } from "@felicienfrancois/vuetify-use-dialog";
 
 const createSnackbar = useSnackbar();
 
@@ -134,7 +134,7 @@ You can optionally install the plugin to provide global initial defaults or use 
 ```ts
 import { createApp } from "vue";
 import { createVuetify } from "vuetify";
-import VuetifyUseDialog from "vuetify-use-dialog";
+import VuetifyUseDialog from "@felicienfrancois/vuetify-use-dialog";
 
 import App from "./App.vue";
 
