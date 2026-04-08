@@ -24,7 +24,8 @@
   "license": "MIT",
   "peerDependencies": {
     "vue": "^3.0.0",
-    "vuetify": "^3.0.0"
+    "vuetify": "^3.0.0",
+    "vue-component-type-helpers": "^3.2.6"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
