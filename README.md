@@ -184,27 +184,27 @@ app.mount("#app");
 | **`contentComponentProps`**             | `object`    | `{}`              | Custom content component props.                                                                                                                         |
 | **`confirmationText`**                  | `string`    | `'Ok'`            | Confirmation button caption.                                                                                                                            |
 | **`cancellationText`**                  | `string`    | `'Cancel'`        | Cancellation button caption.                                                                                                                            |
-| **`dialogProps`**                       | `object`    | `{}`              | [VDialog](https://next.vuetifyjs.com/en/api/v-dialog/#props) props.                                                                                     |
-| **`cardProps`**                         | `object`    | `{}`              | [VCard](https://next.vuetifyjs.com/en/api/v-card/#props) props.                                                                                         |
-| **`confirmationButtonProps`**           | `object`    | `{}`              | [VBtn](https://next.vuetifyjs.com/en/api/v-btn/#props) props for the confirmation button.                                                               |
-| **`cancellationButtonProps`**           | `object`    | `{}`              | [VBtn](https://next.vuetifyjs.com/en/api/v-btn/#props) props for the cancellation button.                                                               |
-| **`cardTitleProps`**                    | `object`    | `{}`              | [VCardTitle](https://next.vuetifyjs.com/en/api/v-card-title/#props) props for the dialog title.                                                         |
-| **`cardTextProps`**                     | `object`    | `{}`              | [VCardText](https://next.vuetifyjs.com/en/api/v-card-text/#props) props for the dialog content.                                                         |
+| **`dialogProps`**                       | `object`    | `{}`              | [VDialog](https://v3.vuetifyjs.com/en/api/v-dialog/#props) props.                                                                                       |
+| **`cardProps`**                         | `object`    | `{}`              | [VCard](https://v3.vuetifyjs.com/en/api/v-card/#props) props.                                                                                           |
+| **`confirmationButtonProps`**           | `object`    | `{}`              | [VBtn](https://v3.vuetifyjs.com/en/api/v-btn/#props) props for the confirmation button.                                                                 |
+| **`cancellationButtonProps`**           | `object`    | `{}`              | [VBtn](https://v3.vuetifyjs.com/en/api/v-btn/#props) props for the cancellation button.                                                                 |
+| **`cardTitleProps`**                    | `object`    | `{}`              | [VCardTitle](https://v3.vuetifyjs.com/en/api/v-card-title/#props) props for the dialog title.                                                           |
+| **`cardTextProps`**                     | `object`    | `{}`              | [VCardText](https://v3.vuetifyjs.com/en/api/v-card-text/#props) props for the dialog content.                                                           |
 | **`confirmationKeyword`**               | `string`    | `-`               | If provided, the confirm button will be disabled by default & an additional textfield will be rendered. The textfield must match `confirmationKeyword`. |
-| **`confirmationKeywordTextFieldProps`** | `object`    | `{}`              | [VTextField](https://next.vuetifyjs.com/en/api/v-text-field/#props) props for the confirmation keyword textfield.                                       |
-| **`cardActionsProps`**                  | `object`    | `{}`              | [VCardActions](https://next.vuetifyjs.com/en/api/v-card-actions/#props) props.                                                                          |
+| **`confirmationKeywordTextFieldProps`** | `object`    | `{}`              | [VTextField](https://v3.vuetifyjs.com/en/api/v-text-field/#props) props for the confirmation keyword textfield.                                         |
+| **`cardActionsProps`**                  | `object`    | `{}`              | [VCardActions](https://v3.vuetifyjs.com/en/api/v-card-actions/#props) props.                                                                            |
 | **`actionsContentComponent`**           | `Component` | `-`               | Custom actions content component.                                                                                                                       |
 
 ### `useSnackbar`
 
-| Name                   | Type        | Default   | Description                                                                        |
-| ---------------------- | ----------- | --------- | ---------------------------------------------------------------------------------- |
-| **`text`**             | `string`    | `''`      | Snackbar text.                                                                     |
-| **`contentComponent`** | `Component` | `-`       | Custom content component rendered instead of `text`.                               |
-| **`snackbarProps`**    | `object`    | `{}`      | [VSnackbar](https://next.vuetifyjs.com/en/api/v-snackbar/#props) props.            |
-| **`showCloseButton`**  | `boolean`   | `true`    | Show the close button.                                                             |
-| **`closeButtonText`**  | `string`    | `'Close'` | Close button text.                                                                 |
-| **`closeButtonProps`** | `object`    | `{}`      | [VBtn](https://next.vuetifyjs.com/en/api/v-btn/#props) props for the close button. |
+| Name                   | Type        | Default   | Description                                                                      |
+| ---------------------- | ----------- | --------- | -------------------------------------------------------------------------------- |
+| **`text`**             | `string`    | `''`      | Snackbar text.                                                                   |
+| **`contentComponent`** | `Component` | `-`       | Custom content component rendered instead of `text`.                             |
+| **`snackbarProps`**    | `object`    | `{}`      | [VSnackbar](https://v3.vuetifyjs.com/en/api/v-snackbar/#props) props.            |
+| **`showCloseButton`**  | `boolean`   | `true`    | Show the close button.                                                           |
+| **`closeButtonText`**  | `string`    | `'Close'` | Close button text.                                                               |
+| **`closeButtonProps`** | `object`    | `{}`      | [VBtn](https://v3.vuetifyjs.com/en/api/v-btn/#props) props for the close button. |
 
 ## License
 
